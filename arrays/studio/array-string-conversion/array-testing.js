@@ -28,8 +28,8 @@ function semiDash() {
 
 //4)
 function reverseSpaces() {
-	let check;
-	let output;
+	let check  = protoArray3.split(" ").sort().reverse();
+	let output = check.join(' ');
   //TODO: write the code required for this step
 
 	return output;
@@ -37,8 +37,8 @@ function reverseSpaces() {
 
 //5)
 function commaSpace() {
-	let check;
-	let output;
+	let check = protoArray4.split(', ');
+	let output = check.join(',');
 	//TODO: write the code required for this step
   
 	return output;
