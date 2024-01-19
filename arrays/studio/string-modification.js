@@ -22,8 +22,8 @@ let userWord = (userNum + userBeginning);
 console.log(userWord);
 
 //3) Add validation to your code to deal with user inputs that are longer than the word. In such cases, default to moving 3 characters. Also, the template literal should note the error.
-if (numOfLetters < 10) {
+if (numOfLetters < str.length) {
     console.log(`Take ${str} and remove the first ${numOfLetters} characters and add them at the end of the phrase. You should get ${userWord}.`);
-} else if (numOfLetters > 9 ) {
+} else if (numOfLetters > str.length) {
     console.log(`${numOfLetters} characters is more than the number of characters in ${str}. Removing the amount of characters and adding them at the end of the phrase only results in you getting ${str} which doesn't give us an alternative word. Let's try a smaller number. `)
 }
