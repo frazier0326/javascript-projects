@@ -7,10 +7,12 @@ function randomSelection(arr){
  
  let words = ['Hello', 'World', 'Python', 'JavaScript', 'Rutabaga'];
  
- for (i=0; i < 8; i++){
+ for (i=0; i < 3; i++){
    console.log(randomSelection(happiness));
  }
- 
+ for (i=0; i < 3; i++){
+  console.log(randomSelection(words));
+}
  //Experiment with the code above. Try to:
  //a) Print 3 random selections from each array.
  //b) Have the code randomly pick one array, and then print 2 random items from it.
