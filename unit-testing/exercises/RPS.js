@@ -20,5 +20,5 @@ function whoWon(player1,player2){
  }
 
  module.exports = {
-    whoWon: whoWon
- };
+  whoWon: whoWon
+};
