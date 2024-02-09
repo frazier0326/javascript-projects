@@ -40,7 +40,7 @@ describe("launchOutput()", function(){
     expect(launchcode.launchOutput(15)).toBe("Code Rocks!");
   });
   test('should pass num that is divisble by 2 AND 5, returns "Launch Rocks!', function(){
-    expect(launchcode.launchOutput(10)).toBe("Launch Rocks!")
+    expect(launchcode.launchOutput(10)).toBe("Launch Rocks! (CRASH!!!!)")
   });
   test('should pass num that is divisble by 2 AND 3 AND 5, returns "LaunchCode Rocks!"', function(){
     expect(launchcode.launchOutput(30)).toBe("LaunchCode Rocks!");

@@ -17,7 +17,7 @@ let launchcode = {
     } else if (n%3===0 && n%5===0 && n%2 !==0) {
         stringOutput = "Code Rocks!"
     } else if (n%2===0 && n%5===0 && n%3 !== 0) {
-        stringOutput = "Launch Rocks!"
+        stringOutput = "Launch Rocks! (CRASH!!!!)"
     } else if (n%2===0 && n%3===0 && n%5===0) {
         stringOutput = "LaunchCode Rocks!"
     }else {
