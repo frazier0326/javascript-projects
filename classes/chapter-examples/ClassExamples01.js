@@ -19,3 +19,7 @@ console.log(fox);
 console.log(fox.age, fox.color);
 
 //Try modifying or adding properties below.
+fox.age = 42;
+fox.color = 'blue';
+fox.habitat = 'forest';
+console.log(fox);
