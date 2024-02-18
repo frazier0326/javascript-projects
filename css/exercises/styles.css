@@ -1,1 +1,10 @@
 /* Start adding your styling below! */ 
+.center {
+    text-align: center;
+}
+#cool-text {
+    color:blue;
+}
+#list-color {
+    color:darkviolet;
+}
