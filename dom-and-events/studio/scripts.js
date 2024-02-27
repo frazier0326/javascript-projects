@@ -22,45 +22,54 @@ window.addEventListener("load", function(){
             shuttleBackground.style.backgroundColor = 'blue';
             altitude = 10000;
             spaceShuttleHeight.innerHTML = altitude;
+            rocketPositionY += 10;
+            rocket.style.marginBottom = rocketPositionY + 'px';
         }
     });
     landingButton.addEventListener('click', function(){
         window.alert("The shuttle is landing. Landing gear engaged");
         flightStatus.innerHTML = 'The shuttle has landed';
-        shuttleBackground.style.backgroundColor = 'green';
-        altitude = 0;
-        spaceShuttleHeight.innerHTML = altitude;
+        resetRocket();
     });
     abortButton.addEventListener('click', function(){
         let shouldAbort = window.confirm("Confirm that you want to abort the mission.");
         if (shouldAbort) {
             flightStatus.innerHTML = "Mission aborted";
-            shuttleBackground.style.backgroundColor = 'green';
-            altitude = 0;
-            spaceShuttleHeight.innerHTML = altitude;
+            resetRocket();
         }
     });
 
     document.addEventListener('click', function(event) {
-        if (event.target.id === "left") {
+        let bkgWidth = parseInt(window.getComputedStyle(shuttleBackground).getPropertyValue('width'));
+
+        if (event.target.id === "left" && rocketPositionX > -(bkgWidth/2-40)) {
             rocketPositionX -= 10;
             rocket.style.marginLeft = rocketPositionX + 'px';
         }
-        if (event.target.id === "right") {
+        if (event.target.id === "right" && rocketPositionX < (bkgWidth/2-40)) {
             rocketPositionX += 10;
             rocket.style.marginLeft = rocketPositionX + 'px';
         }
-        if (event.target.id === "up") {
+        if (event.target.id === "up" && altitude < 250000) {
             rocketPositionY += 10;
             rocket.style.marginBottom = rocketPositionY + 'px';
             altitude += 10000;
             spaceShuttleHeight.innerHTML = altitude;
         }
-        if (event.target.id === "down") {
+        if (event.target.id === "down" && altitude > 0) {
             rocketPositionY -= 10;
             rocket.style.marginBottom = rocketPositionY + 'px';
             altitude -= 10000;
             spaceShuttleHeight.innerHTML = altitude;
         }
     });
+    function resetRocket() {
+        shuttleBackground.style.backgroundColor = 'green';
+        altitude = 0;
+        spaceShuttleHeight.innerHTML = altitude;
+        rocketPositionX = 0;
+        rocketPositionY = 0;
+        rocket.style.marginLeft = rocketPositionX + 'px';
+        rocket.style.marginBottom = rocketPositionY + 'px';
+    }
 });
